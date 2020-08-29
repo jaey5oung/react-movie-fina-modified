@@ -63,10 +63,9 @@ function Login(props) {
   };
   return (
     <Container>
-      <div>
-        <h1>로그인</h1>
-      </div>
+     
       <Wrapper>
+        <div style={{fontSize:"25px" , marginBottom:"20px"}}>로그인</div>
         <form onSubmit={onSubmitHandler}>
           <TextWrapper>
             <MyTextField
@@ -74,7 +73,7 @@ function Login(props) {
               value={Email}
               onChange={onEmailHandler}
           type="email"
-          label="Email"
+          label="이메일 주소 또는 전화번호"
           variant="filled"
           size="small"
           />
@@ -84,7 +83,7 @@ function Login(props) {
           size="small"
               onChange={onPasswordHandler}
               value={Password}
-              label="Password"
+              label="비밀번호"
               type="password"
               autoComplete="current-password"
               variant="filled"
