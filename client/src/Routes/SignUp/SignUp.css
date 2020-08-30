@@ -11,7 +11,7 @@ h6,
 label,
 span {
   font-weight: 500;
-  font-family: "Noto Sans KR", sans-serif;
+  /* font-family: "Noto Sans KR", sans-serif; */
   color: #ffffff;
 }
 body,
@@ -39,7 +39,7 @@ html,
   background-position: center center;
   min-height: 100vh;
   font-weight: 400;
-  font-family: "Noto Sans KR", sans-serif;
+  /* font-family: "Noto Sans KR", sans-serif; */
 }
 .auth-inner {
   width: 450px;

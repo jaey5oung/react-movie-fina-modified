@@ -15,6 +15,7 @@ const MyTextField = styled(TextField)({
   backgroundColor: "white",
   width: "100%",
   borderRadius: "5px",
+  
 });
 function SignUp(props) {
   const dispatch = useDispatch();
@@ -82,12 +83,15 @@ function SignUp(props) {
     });
   };
   return (
+    
     <div className="auth-wrapper">
+      
       <div className="auth-inner">
+      {/* <div style={{fontSize:"30px", display:"flex", }}>회원가입</div> */}
         <form onSubmit={onSubmitHandler} style={{ margin: "0" }}>
           <div className="form-group" style={{ textAlign: "center" }}>
-            <label style={{ marginBottom: "10px", display: "inline-block" }}>
-              프로필 이미지
+            <label style={{ marginBottom: "20px", display: "inline-block" }}>
+      
             </label>
             <br />
             <div
@@ -97,12 +101,14 @@ function SignUp(props) {
                 marginTop: "30px",
               }}
             >
+              
               <Dropzone onDrop={onDrop} multiple={false} maxSize={800000000}>
+                
                 {({ getRootProps, getInputProps }) => (
                   <div
                     style={{
                     
-                      marginBottom:"30px",
+                      marginBottom:"50px",
                       width: "60px",
                       height: "50px",
                       // border: "1px solid black",
@@ -112,11 +118,13 @@ function SignUp(props) {
                     }}
                     {...getRootProps()}
                   >
+                    
                     <input {...getInputProps()} />
+                    
                     <img
                       style={{
                         display: "flex",
-                        borderRadius: "100%",
+                        borderRadius: "10%",
                         justifyContent: "center",
                       }}
                       src={
@@ -131,33 +139,45 @@ function SignUp(props) {
                   </div>
                 )}
               </Dropzone>
+              
             </div>
+            <div style={{textAlign:"center"}}>Image Edit</div>
           </div>
+          <br/>
+          <br/>
           <TextWrapper>
-            <MyTextField
+            <div>Email</div>
+            <br/>
+            <MyTextField style={{backgroundColor:"#e5e5e5"}}
               type="email"
               value={Email}
               onChange={onEmailHandler}
-              placeholder="Enter Email"
-              label="Email"
+              placeholder="이메일"
+              label="이메일을 입력해주세요"
               variant="filled"
               size="small"
             />
           </TextWrapper>
           <TextWrapper>
-            <MyTextField
+          <div>Name</div>
+          <br/>
+            <MyTextField style={{backgroundColor:"#e5e5e5"}}
               type="text"
-              placeholder="Enter Name"
+              placeholder="이름"
               value={Name}
+              label="이름을 입력해주세요"
               onChange={onNameHandler}
               variant="filled"
               size="small"
             />
           </TextWrapper>
           <TextWrapper>
-            <MyTextField
+          <div>Password</div>
+          <br/>
+            <MyTextField style={{backgroundColor:"#e5e5e5"}}
               type="password"
-              placeholder="Enter password"
+              label="비밀번호를 입력해주세요"
+              placeholder="비밀번호"
               value={Password}
               onChange={onPasswordHandler}
               variant="filled"
@@ -165,9 +185,12 @@ function SignUp(props) {
             />
           </TextWrapper>
           <TextWrapper>
-            <MyTextField
+          <div>Confirm Password</div>
+          <br/>
+            <MyTextField style={{backgroundColor:"#e5e5e5"}}
               type="password"
-              placeholder="Confirm password"
+              label="비밀번호 확인"
+              placeholder="비밀번호 확인"
               value={ConfirmPassword}
               onChange={onConfirmPasswordHandler}
               variant="filled"

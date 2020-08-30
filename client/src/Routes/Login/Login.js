@@ -16,7 +16,7 @@ const Container = styled.div`
   background-position: center center;
   min-height: 100vh;
   font-weight: 400;
-  font-family: "Noto Sans KR", sans-serif;
+  /* font-family: "Noto Sans KR", sans-serif; */
 `
 const Wrapper = styled.div`
   width: 450px;
@@ -64,7 +64,7 @@ function Login(props) {
   return (
     <Container>
       <Wrapper>
-        <div style={{ fontSize: "25px", marginBottom: "20px" }}>로그인</div>
+        <div style={{ fontSize: "30px", marginBottom: "40px", fontWeight: "600" }}>로그인</div>
         <form onSubmit={onSubmitHandler}>
           <TextWrapper>
             <MyTextField
@@ -77,6 +77,7 @@ function Login(props) {
               size="small"
             />
           </TextWrapper>
+          <br />
           <TextWrapper>
             <MyTextField
               size="small"
@@ -88,6 +89,8 @@ function Login(props) {
               variant="filled"
             />
           </TextWrapper>
+          <br />
+          <br />
           <div style={{ textAlign: "center" }}>
             <button
               type="submit"
@@ -97,42 +100,43 @@ function Login(props) {
               로그인
             </button>
           </div>
+          <br />
+          <div style={{ display: "flex" }}>
+            {/* <div
+              style={{
+                color: "#B3B3B3",
+              }}
+            >
+              로그인 정보 저장
+            </div>
+            */}
+            {/* <input type="button" name="로그인 정보 저장" style={{color:"#b3b3b3"}}></input> */}
+            <div style={{ display: "flex" }}>
+              <input type="checkbox" style={{ margin: "-1px" }} />
+              <div
+                style={{
+                  color: "#B3B3B3",
+                  marginLeft: "5px",
+                }}
+              >
+                로그인 정보 저장
+              </div>
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div style={{ margin: "-2px" }}>
+              <a href="/sign-up">도움이 필요하신가요?</a>
+            </div>
+          </div>
+          <br />
           <SocialLogin />
           <br />
-          <a href="/sign-up">Bongflix 회원이 아닌가요? 지금 가입하세요.</a>
+          <span style={{ color: "#737373" }}>Bongflix 회원이 아닌가요?</span>&nbsp;&nbsp;
+          <a href="/sign-up">지금 가입하세요.</a>
         </form>
       </Wrapper>
     </Container>
-    // <div className="auth-wrapper">
-    //   <div className="auth-inner">
-    //     <form onSubmit={onSubmitHandler}>
-    //       <div className="form-group">
-    //         <input
-    //           type="email"
-    //           className="form-control"
-    //           placeholder="이메일"
-    //           value={Email}
-    //           onChange={onEmailHandler}
-    //         />
-    //       </div>
-    //       <div className="form-group">
-    //         <input
-    //           type="password"
-    //           className="form-control"
-    //           placeholder="비밀번호"
-    //           value={Password}
-    //           onChange={onPasswordHandler}
-    //         />
-    //       </div>
-    //       <button type="submit" className="btn btn-primary btn-block">
-    //         로그인
-    //       </button>
-    //       <SocialLogin />
-    //       <br />
-    //       <a href="/sign-up">회원이 아니신가요?</a>
-    //     </form>
-    //   </div>
-    // </div>
+
+ 
   )
 }
 export default withRouter(Login)
