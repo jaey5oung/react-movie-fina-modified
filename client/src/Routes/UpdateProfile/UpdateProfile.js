@@ -175,17 +175,7 @@ function UpdateProfile(props) {
                 </div>
               )}
             </Dropzone>
-            <button
-              onClick={removeProfileImage}
-              style={{
-                backgroundColor: "transparent",
-                color: "2e2e2e",
-                borderColor: "transparent",
-                fontweight: "border",
-              }}
-            >
-              X
-            </button>
+     
             <Form.Item
               style={{
                 color: "black",
@@ -195,7 +185,18 @@ function UpdateProfile(props) {
                 marginTop: "50px",
               }}
             >
-              <Title>{currentEmail}</Title>
+                     <button
+              onClick={removeProfileImage}
+              style={{
+                backgroundColor: "transparent",
+                color: "2e2e2e",
+                borderColor: "transparent",
+                fontweight: "border",
+              }}
+            >
+              Default Image
+            </button>
+              <Title style={{fontSize:"29px"}}>{currentEmail}</Title>
               <AccountCircle /> <span style={{ color: "darkgray" }}>User</span> &nbsp;&nbsp;
               <AccessTime /> <span style={{ color: "darkgray" }}>Joined August 18,2020</span>
             </Form.Item>

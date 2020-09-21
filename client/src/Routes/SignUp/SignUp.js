@@ -21,6 +21,7 @@ function SignUp(props) {
   const dispatch = useDispatch();
   const [Email, setEmail] = useState("");
   const [Name, setName] = useState("");
+  const [Number,setNumber]=useState("");
   const [Password, setPassword] = useState("");
   const [ConfirmPassword, setConfirmPassword] = useState("");
   const [FilePath, setFilePath] = useState(DEFAULT_PROFILE);
@@ -32,6 +33,9 @@ function SignUp(props) {
   const onNameHandler = event => {
     setName(event.currentTarget.value);
   };
+  const onNumberHandler = event =>{
+    setNumber(event.currentTarget.value)
+  }
   const onPasswordHandler = event => {
     setPassword(event.currentTarget.value);
   };
@@ -68,6 +72,7 @@ function SignUp(props) {
     let body = {
       email: Email,
       password: Password,
+      number: Number,
       name: Name,
       image: FilePath,
       gender: Gender,
@@ -167,6 +172,19 @@ function SignUp(props) {
               value={Name}
               label="이름을 입력해주세요"
               onChange={onNameHandler}
+              variant="filled"
+              size="small"
+            />
+          </TextWrapper>
+          <TextWrapper>
+            <div>Number</div>
+            <br/>
+            <MyTextField style={{backgroundColor:"#e5e5e5"}}
+              type="number"
+              value={Number}
+              onChange={onNumberHandler}
+              placeholder="전화번호"
+              label="전화번호를 입력해주세요"
               variant="filled"
               size="small"
             />
