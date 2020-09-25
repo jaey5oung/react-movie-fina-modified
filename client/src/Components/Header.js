@@ -275,6 +275,3 @@ export default withRouter(
     );
   }
 );
-//const SLink = styled(Link)``; : React Router에서 주어진 Link, 이런식으로 스타일을 추가 할 수있다.
-//npm i styled-reset : SC를 이용해서 CSS를 초기화해서 0의 상태에서 시작하게 하는 거야
-//position:fixed 스크롤해도 그자리에 있게 하기 위해
